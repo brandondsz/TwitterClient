@@ -1,0 +1,25 @@
+﻿@model List<Model.TweetModel>
+@using TwitterClient.Helpers
+
+
+<div class="col-sm-12">
+    <table class="table table-striped table-bordered table-hover ">
+        @if (Model == null)
+        {
+            <tr>No tweets found</tr>
+        }
+        else
+        {
+            foreach (var tweet in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayTweet(tweet)
+                    </td>
+                </tr>
+            }
+        }
+
+    </table>
+</div>
+

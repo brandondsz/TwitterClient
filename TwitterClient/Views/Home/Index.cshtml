@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "Twitter Client";
+}
+<style>
+    #username {
+        width: 100%;
+        max-width: none;
+    }
+
+    #getTweets {
+        width: 100%;
+        max-width: none;
+    }
+
+    #results {
+        align-content: center;
+        overflow-y: auto;
+        height: 500px;
+        margin:20px;
+    }
+    
+</style>
+
+
+<div class="row">
+    <form class="form-inline">
+        <div class="col-sm-12 col-md-10">
+            <input type="text" class="form-control" id="username" placeholder="enter username">
+
+        </div>
+        <div class="col-sm-12 col-md-2">
+            <button type="button" id="getTweets" class="btn-primary btn " data-loading-text="<span class='glyphicon-left glyphicon glyphicon-refresh'></span>Loading... ">Go </button>
+        </div>
+
+    </form>
+</div>
+<div class="row">
+    <div id="results"></div>
+</div>
+@section Scripts {
+    <script>
+    $(document).ready(function () {
+        $('#username').focus();
+    })
+    var url = '@Url.Action("GetLatestTweets", "Home")';
+    $('#getTweets').click(function () {
+        GetTweets();
+    })
+    
+    $('#username').keypress(function (e) {
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            GetTweets();
+        }
+        $('#errorMsg').hide();
+    })
+
+    function GetTweets() {
+        var username = $('#username').val();
+        if (username == '') {
+            ShowError("Please enter a username")
+        }
+        else {
+            $('#getTweets').button('loading');
+            $.get(url, { username: username }, function (data) {
+                $('#results').html(data);
+            }).always(function () {
+                $('#getTweets').button('reset');
+            });
+        }
+    }
+    function ShowError(errorMessage) {
+        $('#errorMsg').text(errorMessage);
+        $('#errorMsg').show();
+    }
+
+    </script>
+}

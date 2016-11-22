@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterClient", "TwitterClient\TwitterClient.csproj", "{1AA119DD-9C32-4E85-A557-73F0FD8CBFC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FDB3AF4A-A359-477E-BF43-A398602267A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services\Services.csproj", "{FA1AE8A1-A329-46A6-96A5-C66142ED1568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{DB60CC74-9D31-4BAB-91E5-22839D0F9CE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{4630CC95-2EA3-43ED-B6E7-B6352D9DF0E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AA119DD-9C32-4E85-A557-73F0FD8CBFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA119DD-9C32-4E85-A557-73F0FD8CBFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA119DD-9C32-4E85-A557-73F0FD8CBFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA119DD-9C32-4E85-A557-73F0FD8CBFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA1AE8A1-A329-46A6-96A5-C66142ED1568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA1AE8A1-A329-46A6-96A5-C66142ED1568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA1AE8A1-A329-46A6-96A5-C66142ED1568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA1AE8A1-A329-46A6-96A5-C66142ED1568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4630CC95-2EA3-43ED-B6E7-B6352D9DF0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4630CC95-2EA3-43ED-B6E7-B6352D9DF0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4630CC95-2EA3-43ED-B6E7-B6352D9DF0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4630CC95-2EA3-43ED-B6E7-B6352D9DF0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA1AE8A1-A329-46A6-96A5-C66142ED1568} = {FDB3AF4A-A359-477E-BF43-A398602267A2}
+		{4630CC95-2EA3-43ED-B6E7-B6352D9DF0E3} = {DB60CC74-9D31-4BAB-91E5-22839D0F9CE9}
+	EndGlobalSection
+EndGlobal
